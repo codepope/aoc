@@ -73,16 +73,6 @@ func main() {
 	fmt.Println("Min steps", minSteps)
 }
 
-func printMaps(mymap [][]byte) {
-	for i := 0; i < len(mymap); i++ {
-		for j := 0; j < len(mymap[0]); j++ {
-			fmt.Print(string(mymap[i][j]))
-		}
-		fmt.Println()
-	}
-	fmt.Println()
-}
-
 func getC(mymap [][]byte, p coord) byte {
 	if p.y < 0 || p.x < 0 || p.y >= len(mymap) || p.x >= len(mymap[0]) {
 		return 0
